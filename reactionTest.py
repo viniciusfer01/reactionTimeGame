@@ -172,6 +172,21 @@ while running:
 
     keys = pygame.key.get_pressed()
 
+    # reset game
+    if keys[pygame.K_SPACE]:
+        print('resetting game')
+        time.sleep(3)
+        randomNumber = generateRandomNumber()
+        player_pos = generateRandomPosition()
+        scored = False
+        initialTime = pygame.time.get_ticks() / 1000
+        score = 0
+        totalAttempts = 0
+        currentTime = 0
+        hitPoints = 3
+        times = []
+        averageTime = 0
+
     renderCircle()
 
     checkKey()
